@@ -1,0 +1,103 @@
+@import 'flowbite';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Light Mode */
+body.light-mode {
+    --color-primary: #7A1414;
+    /* Dark Red */
+    --color-secondary: #000000;
+    /* Black */
+    --color-accent: #D9D9D9;
+    /* Light Gray */
+    --color-text: #333333;
+    /* Charcoal Gray */
+    --color-background: #FFFFFF;
+    /* White */
+}
+
+/* Dark Mode */
+body.dark-mode {
+    --color-primary: #7A1414;
+    /* Dark Red */
+    --color-secondary: #FFFFFF;
+    /* White */
+    --color-accent: #333333;
+    /* Charcoal Gray */
+    --color-text: #D9D9D9;
+    /* Light Gray */
+    --color-background: #000000;
+    /* Black */
+}
+
+
+/* Global Styles */
+body {
+    background-color: var(--color-background);
+    color: var(--color-text);
+    font-family: 'Figtree', sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    border: 1px solid var(--color-primary);
+}
+
+.btn-primary:hover {
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+}
+
+/* Adjust Button Text for Dark Mode */
+body.light-mode .btn-primary {
+    background-color: var(--color-primary);
+    color: #f0f0f0;
+    /* Slightly darker white */
+    border: 1px solid var(--color-primary);
+}
+
+body.light-mode .btn-primary:hover {
+    background-color: var(--color-secondary);
+    color: #e0e0e0;
+    /* Even darker white for hover */
+    border: 1px solid var(--color-primary);
+}
+
+/* Card Component */
+.card {
+    background-color: var(--color-background);
+    border: 1px solid var(--color-accent);
+    color: var(--color-text);
+}
+
+/* Form Inputs */
+.input-field {
+    background-color: var(--color-background);
+    border: 1px solid var(--color-accent);
+    color: var(--color-text);
+}
+
+.input-field:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 4px var(--color-primary);
+}
+
+/* Links */
+a {
+    color: var(--color-primary);
+}
+
+a:hover {
+    color: var(--color-secondary);
+}
+
+/* Footer */
+.footer {
+    background-color: var(--color-accent);
+    color: var(--color-text);
+}
